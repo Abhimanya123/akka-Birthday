@@ -68,27 +68,6 @@ footer{padding:35px;text-align:center;color:#625a5d;font-size:10px;letter-spacin
  section{padding:85px 18px}.gallery{gap:10px}.p1,.p2,.p3,.p4,.p5,.p6,.p7{grid-column:span 12;height:360px}.p1{height:450px}.p2{height:400px}.section-title{top:48px}.section-title h2{font-size:38px}
 }
 </style>
-<script>
-(function () {
-  const url = new URL(window.location.href);
-  let changed = false;
-
-  for (const key of [...url.searchParams.keys()]) {
-    if (key.toLowerCase().startsWith("utm_")) {
-      url.searchParams.delete(key);
-      changed = true;
-    }
-  }
-
-  if (changed) {
-    window.history.replaceState(
-      {},
-      document.title,
-      url.pathname + url.search + url.hash
-    );
-  }
-})();
-</script>
 </head>
 <body>
 <div class="bg"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
